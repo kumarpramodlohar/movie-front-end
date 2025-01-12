@@ -12,7 +12,7 @@ const Movies = () => {
       method: "GET",
       headers: headers,
     };
-    fetch(`/movies`, requestOptions)
+    fetch(`${process.env.REACT_APP_BACKEND}/movies`, requestOptions)
       .then((response) => response.json())
       .then((data) => {
         setMovies(data);
